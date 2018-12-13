@@ -6,12 +6,14 @@
 <a href="/donations/new">New Donation</a>
 <div class="row">
 {{#each donations}}
+<div class="col-md-3 mt-4" >
 <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
   <div class="card-header"><h2><a href="/donations/{{this._id}}">{{this.charity}}</a></h2></div>
   <div class="card-body">
     <h5 class="card-title">{{this.user}}</h5>
     <p class="card-text">{{this.donation}}</p>
     <p class="card-text">{{this.date}}</p>
+    </div>
   </div>
 </div>
     <!-- <div class="col-sm-3">
