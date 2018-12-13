@@ -4,6 +4,18 @@ var exphbs = require('express-handlebars');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override')
+
+
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+app.use(methodOverride('_method'))
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+// Tell your Express app that your static files will live in the public folder
+app.use(express.static('public'));
+
+
 // const Comment = require('./models/comment')
 // const Review = require('./models/review')
 // const reviews = require('./controllers/reviews')(app);
@@ -13,18 +25,8 @@ const donationsController = require('./controllers/donations');
 const charitiesController = require('./controllers/charitys');
 
 
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rotten-potatoes');
-
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
-app.use(methodOverride('_method'))
-app.use(bodyParser.urlencoded({ extended: true }));
 
 
-
-
-// Tell your Express app that your static files will live in the public folder
-app.use(express.static('public'));
 
 donationsController(app);
 // charitiesController(app);
@@ -46,10 +48,8 @@ mongoose.connect(
 
 
 
-app.listen(port);
 
 
-//
 app.listen(3000, () => {
   console.log('App listening on port 3000!')
 })
