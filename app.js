@@ -43,8 +43,7 @@ mongoose.connect(
    { useNewUrlParser: true }
 );
 
-// mongoose.connect('mongodb://localhost/rotten-potatoes');
-// override with POST having ?_method=DELETE or ?_method=PUT
+
 
 
 // app.listen(port);
