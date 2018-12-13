@@ -1,0 +1,38 @@
+    <input type="hidden" value="{{charity._id}}" name="charityID">
+    <fieldset>
+        <legend>Add a Donation</legend>
+        <!-- Name of donator-->
+        <div class="form-group">
+            <label for="user">Name</label><br>
+            <input class="form-control"
+                id="user"
+                type="text"
+                name="user"
+                placeholder="User"
+                value="{{donation.user}}"/>
+        </div>
+
+        <!-- Charity -->
+        <div class="form-group">
+            <label for="donation">Charity</label><br>
+            <input class="form-control"
+                id="charity"
+                type="text"
+                name="charity"
+                placeholder="Charity"
+                value="{{donation.charity}}"/>
+        </div>
+
+        <!-- Donation Amount -->
+        <div class="form-group">
+            <label for="donation">Donation Amount</label><br>
+            <input class="form-control"
+                id="donation"
+                type="text"
+                name="donation"
+                placeholder="Donation"
+                value="{{donation.donation}}"/>
+        </div>
+
+
+    </fieldset>

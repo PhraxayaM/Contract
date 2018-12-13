@@ -1,0 +1,15 @@
+<!-- views/donations-index.handlebars -->
+
+
+<h1>Donations</h1>
+
+<a href="/donations/new">New Donation</a>
+<div class="row">
+{{#each donations}}
+    <div class="col-sm-3">
+        <h2><a href="/donations/{{this._id}}">{{this.charity}}</a></h2>
+        <small>{{this.user}}</small>
+        <small>{{this.donation}}</small>
+    </div>
+{{/each}}
+</div>
