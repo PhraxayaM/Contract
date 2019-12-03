@@ -1,7 +1,17 @@
 <!-- views/donations-index.handlebars -->
 
 
-<h1>Donations with google analytics</h1>
+<h1>Donations with google analytics
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150720207-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-150720207-1');
+    </script>
+</h1>
 
 <a href="/donations/new">New Donation</a>
 <div class="row">
